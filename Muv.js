@@ -1,7 +1,5 @@
 class Moov {
   constructor() {
-    //Repeat Element
-
     //Set Canvas
     var container = container;
     var canvas = canvas;
@@ -12,40 +10,6 @@ class Moov {
   }
 
   // Moov.js Methods
-
-  // RepeatElement(repeatElementId, containerElementId, reps, pxBetween) {
-  //   var vp = document.getElementById(containerElementId);
-  //   var line = document.getElementById(repeatElementId);
-  //   var newLine = line.cloneNode(true);
-  //   console.log(line);
-  //   var x1 = -350;
-  //   var x2 = 400;
-
-  //   var i = 0;
-  //   while (i < reps) {
-  //     newLine.setAttribute('id', 'draw');
-
-  //     var distance = Math.floor(Math.random() * pxBetween);
-  //     x1 += distance;
-  //     x2 += distance;
-  //     var d = 'M'+ x1 + ',0 L' + x2 + ',1000';
-  //     newLine.setAttribute('d', d);
-  //     console.log(d);
-
-  //     // newLine.setAttribute('x1', Number(newLine.attributes.x1.nodeValue) + distance);
-  //     // newLine.setAttribute('x2', Number(newLine.attributes.x2.nodeValue) + distance + 30);
-
-  //     vp.appendChild(newLine);
-
-  //     newLine = newLine.cloneNode(true);
-  //     i++;
-  //   }
-  // }
-
-
-
-
-
 
 // SWIPE
 
@@ -68,6 +32,8 @@ class Moov {
       endX: 0,
       endY: 0
     }
+
+    // TODO: figure out whether to allow control of min swipe distance
 
     // let min_x = optional.swipe_distance.min_x !== undefined ? optional.swipe_distance.min_x : 30;  //min x swipe for horizontal swipe
     // let max_x = optional.swipe_distance.max_x !== undefined ? optional.swipe_distance.max_x : 30;  //max x difference for vertical swipe
@@ -119,6 +85,7 @@ class Moov {
         direction = null;
       },false);  
 
+
       // touch events for Firefox
       function _mozTouchEvents() {
         element.addEventListener('MozTouchDown',function(e){
@@ -167,11 +134,6 @@ class Moov {
     }
   }
 
-
-
-
-
-
   ////////////////////////////////////////////////////////////////
   //////////// TODO: FURTHER DEVELOP MOOV.js /////////////////////
 
@@ -188,7 +150,3 @@ class Moov {
     direction = undefined;
   }
 }
-
-//var m = new Moov();
-
-//m.RepeatElement('one', 'vp', 25, 100);
